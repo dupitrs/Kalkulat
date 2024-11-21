@@ -10,11 +10,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #ed6a6a;
+    background-color: #DE7C7D;
 }
 
 .calculator {
-    background-color: rgb(116, 116, 116);
+    background-color: #542b3d;
     padding: 20px;
     width: 300px;
     border: 3px solid #000000;
@@ -64,6 +64,13 @@ button.clear {
 
 .history {
     margin-top: 20px;
+    margin-left: 150px;
+    height: 420px;
+    width: 250px;
+    background-color: #CC2B52;
+    border-radius: 5px;
+    border: 3px solid #000000;
+    text-align: center;
 }
 
 #historyList {
@@ -72,7 +79,7 @@ button.clear {
 }
 
 #historyList li {
-    background-color: #f9f9f9;
+    background-color: #f5b990;
     padding: 8px;
     margin-bottom: 5px;
     display: flex;
