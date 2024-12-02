@@ -60,8 +60,8 @@ function calculate() {
 
 function addToHistory(expression, result) {
     history.push({ expression, result });
-    if (history.length > 5) {
-        history.shift(); // Limit history to 3 items
+    if (history.length > 4) {
+        history.shift(); 
     }
     localStorage.setItem('history', JSON.stringify(history));
     updateHistory();

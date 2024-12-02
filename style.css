@@ -10,15 +10,15 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #DE7C7D;
+    background-color: #5e4b8b; 
 }
 
 .calculator {
-    background-color: #542b3d;
+    background-color: #333333; 
     padding: 20px;
     width: 300px;
     border: 3px solid #000000;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 50);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
 }
 
 .display {
@@ -32,6 +32,7 @@ input {
     font-size: 24px;
     border: 2px solid #000000;
     border-radius: 5px;
+    background-color: #f4f4f4;
 }
 
 .buttons {
@@ -43,7 +44,7 @@ input {
 button {
     padding: 15px;
     font-size: 18px;
-    background-color: #eaeaea;
+    background-color: #d3d3d3; 
     border: 3px solid #000000;
     border-radius: 5px;
     cursor: pointer;
@@ -51,15 +52,15 @@ button {
 }
 
 button:hover {
-    background-color: #ffb3b3;
+    background-color: #b8b8b8; 
 }
 
 button:active {
-    background-color: #ccc;
+    background-color: #999999;
 }
 
 button.clear {
-    background-color: #f8d7da;
+    background-color: #f44336;
 }
 
 .history {
@@ -67,10 +68,11 @@ button.clear {
     margin-left: 150px;
     height: 420px;
     width: 250px;
-    background-color: #CC2B52;
+    background-color: #2d1b53; 
     border-radius: 5px;
     border: 3px solid #000000;
     text-align: center;
+    position: relative;
 }
 
 #historyList {
@@ -79,7 +81,7 @@ button.clear {
 }
 
 #historyList li {
-    background-color: #f5b990;
+    background-color: #9e75cc; 
     padding: 8px;
     margin-bottom: 5px;
     display: flex;
@@ -87,11 +89,33 @@ button.clear {
 }
 
 #historyList li button {
-    background-color: #f1f1f1;
+    background-color: #d0b2f2; 
     border: none;
     cursor: pointer;
 }
 
 #historyList li button:hover {
-    background-color: #e2e2e2;
+    background-color: #e2d3f9;
+}
+
+h3{
+    color: #f4f4f4;
+}
+
+
+/* .history button{
+    position: absolute;
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-color: #d0b2f2;
+
+} */
+
+#but{
+    position: absolute;
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-color: #d0b2f2;
 }
