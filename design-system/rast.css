@@ -1,0 +1,231 @@
+/* rast dizaina sistēma v3 — tokeni + komponenti
+   Avots: .claude/skills/rast-design-system/tokens.md */
+
+:root {
+  --bg: #0A0A0C;
+  --bg-2: #0E0E11;
+  --surface: #131318;
+  --surface-2: #17171D;
+
+  --ink: #F4F0E9;
+  --ink-dim: #A7A2AE;
+  --ink-faint: #6E6A77;
+
+  --accent: #FF4A2E;
+  --accent-soft: #FF6A4D;
+  --accent-deep: #C9341C;
+
+  --bg-rgb: 10,10,12; --ink-rgb: 244,240,233; --accent-rgb: 255,74,46;
+  --line: rgba(var(--ink-rgb), 0.10);
+  --line-2: rgba(var(--ink-rgb), 0.18);
+
+  --container: 1320px;
+  --gutter: clamp(20px, 5vw, 80px);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --radius: 18px;
+  --radius-pill: 100px;
+
+  --font-display: 'Bricolage Grotesque', 'Inter', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--accent); color: var(--bg); }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---------- Tipogrāfija ---------- */
+
+.hero-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(33px, 9.6vw, 150px);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  font-optical-sizing: none;
+  font-variation-settings: 'opsz' 96;
+  margin: 0;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(30px, 4.6vw, 62px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-variation-settings: 'opsz' 96;
+  margin: 0;
+}
+
+.card-lead {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(19px, 1.9vw, 27px);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.body-text { font-size: 16px; line-height: 1.6; margin: 0; }
+.small-text { font-size: 15px; margin: 0; }
+.meta-text { font-size: 14px; color: var(--ink-faint); margin: 0; }
+
+/* Etiķete / eyebrow — Inter versāli + 22px vermiliona svītriņš */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+.eyebrow::before { content: ''; width: 22px; height: 1px; background: var(--accent); }
+
+/* ---------- Wordmark ---------- */
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.brand .accent { color: var(--accent); }
+
+/* Punkts kā atsevišķs elements (favicon / signature mērogam) */
+.brand-dot {
+  display: inline-block;
+  width: 0.18em;
+  height: 0.18em;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, var(--accent), var(--accent-deep));
+}
+
+/* ---------- Pogas ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  padding: 16px 28px;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s var(--ease), background 0.3s var(--ease),
+    color 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+.btn--solid { background: var(--accent); color: var(--bg); }
+.btn--solid:hover { background: var(--accent-soft); transform: translateY(-2px); }
+.btn--ghost { background: transparent; color: var(--ink); border-color: var(--line-2); }
+.btn--ghost:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+
+/* ---------- Kartes ---------- */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: background 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.card:hover { background: var(--surface-2); transform: translateY(-2px); }
+
+/* ---------- Formas ---------- */
+
+.field { display: grid; gap: 8px; }
+.field label { font-size: 15px; color: var(--ink-dim); }
+.field input,
+.field textarea {
+  background: var(--bg-2);
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  padding: 14px 18px;
+  transition: border-color 0.3s var(--ease);
+}
+.field input:focus,
+.field textarea:focus { outline: none; border-color: var(--accent); }
+.field input::placeholder,
+.field textarea::placeholder { color: var(--ink-faint); }
+
+/* Formas statusi: sūta = --ink-dim, OK = --ink, kļūda = --accent */
+.form-status--sending { color: var(--ink-dim); }
+.form-status--ok { color: var(--ink); }
+.form-status--error { color: var(--accent); }
+
+/* ---------- Saraksti ---------- */
+
+.arrow-list { list-style: none; margin: 0; padding: 0; }
+.arrow-list li {
+  position: relative;
+  padding: 14px 0 14px 34px;
+  border-top: 1px solid var(--line);
+}
+.arrow-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* ---------- FAQ ---------- */
+
+.faq { border-top: 1px solid var(--line); }
+.faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 19px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: '';
+  flex: 0 0 auto;
+  width: 14px;
+  height: 14px;
+  background:
+    linear-gradient(var(--ink-dim), var(--ink-dim)) center / 14px 2px no-repeat,
+    linear-gradient(var(--ink-dim), var(--ink-dim)) center / 2px 14px no-repeat;
+  transition: transform 0.3s var(--ease);
+}
+.faq[open] summary::after {
+  background: linear-gradient(var(--ink-dim), var(--ink-dim)) center / 14px 2px no-repeat;
+}
+.faq p { margin: 0 0 18px; color: var(--ink-dim); }
+
+/* ---------- Palīgklases priekšskatījumiem ---------- */
+
+.ds-frame { padding: 40px; min-height: 100%; }
+.ds-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.ds-stack { display: grid; gap: 24px; }
+.ds-note { font-size: 13px; color: var(--ink-faint); }
+hr.hairline { border: 0; border-top: 1px solid var(--line); margin: 24px 0; }

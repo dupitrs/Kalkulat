@@ -1,0 +1,38 @@
+<!-- @dsCard group="Spacing" name="Izkārtojums un rādiusi" subtitle="Container, gutter, divi rādiusi, matiņlīnijas" width="900" height="520" -->
+<!doctype html>
+<html lang="lv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../rast.css">
+<style>
+  .demo { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-end; }
+  .box { background: var(--surface); border: 1px solid var(--line-2); display: grid; place-items: center; color: var(--ink-dim); font-size: 13px; }
+  .r18 { width: 180px; height: 110px; border-radius: 18px; }
+  .r100 { width: 220px; height: 56px; border-radius: 100px; }
+  dl { display: grid; grid-template-columns: auto 1fr; gap: 8px 24px; margin: 0; font-size: 14px; }
+  dt { color: var(--ink-faint); }
+  dd { margin: 0; }
+</style>
+</head>
+<body class="ds-frame">
+  <p class="eyebrow">Izkārtojums</p>
+  <hr class="hairline">
+  <div class="demo">
+    <div class="box r18">radius 18px — kartes, ievadi, modālie</div>
+    <div class="box r100">radius 100px — pilas</div>
+  </div>
+  <hr class="hairline">
+  <dl>
+    <dt>--container</dt><dd>1320px</dd>
+    <dt>--gutter</dt><dd>clamp(20px, 5vw, 80px)</dd>
+    <dt>--ease</dt><dd>cubic-bezier(0.22, 1, 0.36, 1) — mājas līkne</dd>
+    <dt>Sekciju padding</dt><dd>clamp(70px, ..., 200px) vertikāli — gaiss signalizē premium</dd>
+    <dt>Dalītāji</dt><dd>matiņlīnijas: --line (0.10) dalītājiem, --line-2 (0.18) apmalēm</dd>
+    <dt>Rādiusi</dt><dd>tikai divas vērtības: 18px un 100px. Vairāk nav.</dd>
+  </dl>
+  <hr class="hairline">
+  <p class="ds-note">Numerācija tikai īstai secībai (piem. 4 soļu process), nekad kā dekors.</p>
+</body>
+</html>

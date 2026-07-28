@@ -1,0 +1,41 @@
+<!-- @dsCard group="Components" name="Formas" subtitle="Lauki, fokuss, statusi" width="700" height="560" -->
+<!doctype html>
+<html lang="lv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../rast.css">
+<style>
+  form { display: grid; gap: 18px; max-width: 480px; }
+  .statuses { display: grid; gap: 6px; font-size: 15px; }
+</style>
+</head>
+<body class="ds-frame">
+  <p class="eyebrow">Kontaktu forma</p>
+  <hr class="hairline">
+  <form onsubmit="return false">
+    <div class="field">
+      <label for="name">Vārds</label>
+      <input id="name" type="text" placeholder="Tavs vārds">
+    </div>
+    <div class="field">
+      <label for="email">E-pasts</label>
+      <input id="email" type="email" placeholder="tu@epasts.lv">
+    </div>
+    <div class="field">
+      <label for="msg">Ziņa</label>
+      <textarea id="msg" rows="3" placeholder="Pastāsti par savu projektu…"></textarea>
+    </div>
+    <div><button class="btn btn--solid" type="submit">Nosūtīt</button></div>
+  </form>
+  <hr class="hairline">
+  <div class="statuses">
+    <span class="form-status--sending">Sūta…</span>
+    <span class="form-status--ok">Paldies! Pieteikums nosūtīts, atbildēsim drīz.</span>
+    <span class="form-status--error">Neizdevās nosūtīt — raksti hello@raststudio.lv</span>
+  </div>
+  <hr class="hairline">
+  <p class="ds-note">Fons --bg-2, apmale --line-2, radius 18px, fokusā akcenta apmale. Statusi: sūta = --ink-dim, OK = --ink, kļūda = --accent (nav zaļā/zilā).</p>
+</body>
+</html>

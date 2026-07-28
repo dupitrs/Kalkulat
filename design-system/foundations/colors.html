@@ -1,0 +1,36 @@
+<!-- @dsCard group="Colors" name="Krāsu palete" subtitle="Foni, tinte, vermilions, līnijas" width="900" height="640" -->
+<!doctype html>
+<html lang="lv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../rast.css">
+<style>
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 14px; }
+  .swatch { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .swatch .chip { height: 72px; }
+  .swatch .info { padding: 10px 14px; background: var(--surface); }
+  .swatch .info b { display: block; font-size: 13px; font-weight: 500; }
+  .swatch .info span { font-size: 12px; color: var(--ink-faint); }
+</style>
+</head>
+<body class="ds-frame">
+  <p class="eyebrow">Krāsas</p>
+  <hr class="hairline">
+  <div class="swatches">
+    <div class="swatch"><div class="chip" style="background:#0A0A0C"></div><div class="info"><b>--bg</b><span>#0A0A0C · lapas pamats</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#0E0E11"></div><div class="info"><b>--bg-2</b><span>#0E0E11 · izvēlne / paneļi</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#131318"></div><div class="info"><b>--surface</b><span>#131318 · kartes</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#17171D"></div><div class="info"><b>--surface-2</b><span>#17171D · hover kartes</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#F4F0E9"></div><div class="info"><b>--ink</b><span>#F4F0E9 · pamatteksts</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#A7A2AE"></div><div class="info"><b>--ink-dim</b><span>#A7A2AE · sekundārs</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#6E6A77"></div><div class="info"><b>--ink-faint</b><span>#6E6A77 · meta ≥14px</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#FF4A2E"></div><div class="info"><b>--accent</b><span>#FF4A2E · vienīgais akcents</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#FF6A4D"></div><div class="info"><b>--accent-soft</b><span>#FF6A4D · tikai hover</span></div></div>
+    <div class="swatch"><div class="chip" style="background:#C9341C"></div><div class="info"><b>--accent-deep</b><span>#C9341C · tikai punktam</span></div></div>
+  </div>
+  <hr class="hairline">
+  <p class="ds-note">Viens akcents uz skata, ≤10% no virsmas. Vienīgais atļautais gradients ir punkts (--accent → --accent-deep). Teksts uz akcenta aizpildījuma vienmēr --bg, nekad balts (~5,9:1 pret ~2,9:1).</p>
+</body>
+</html>

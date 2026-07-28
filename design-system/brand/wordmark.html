@@ -1,0 +1,34 @@
+<!-- @dsCard group="Brand" name="Wordmark un punkts" subtitle="rast. — zīmola atoms" width="700" height="420" -->
+<!doctype html>
+<html lang="lv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../rast.css">
+<style>
+  .wordmark-demo { display: flex; align-items: baseline; gap: 48px; flex-wrap: wrap; }
+  .wm-xl { font-size: 96px; }
+  .wm-md { font-size: 40px; }
+  .wm-sm { font-size: 20px; }
+  .dot-demo { display: flex; align-items: center; gap: 20px; }
+  .dot-demo .brand-dot { width: 28px; height: 28px; }
+</style>
+</head>
+<body class="ds-frame">
+  <p class="eyebrow">Wordmark</p>
+  <hr class="hairline">
+  <div class="wordmark-demo">
+    <span class="brand wm-xl">rast<span class="accent">.</span></span>
+    <span class="brand wm-md">rast<span class="accent">.</span></span>
+    <span class="brand wm-sm">rast<span class="accent">.</span></span>
+  </div>
+  <hr class="hairline">
+  <div class="dot-demo">
+    <span class="brand-dot"></span>
+    <p class="ds-note">Punkts atsevišķi — favicon, kājene, preloaderis un signature ceļojums. Vienīgais atļautais gradients: --accent → --accent-deep.</p>
+  </div>
+  <hr class="hairline">
+  <p class="ds-note">Mazie burti, Bricolage 700, tracking −0,02em. Punkts vienmēr ciets — nekad gails, nekad ar ēnu, nekad ar apli apkārt. Signature: punkts atdalās no hero wordmarka un apsēžas kājenē (3 atpūtas punkti, IntersectionObserver, ≤5 KB JS, prefers-reduced-motion → paliek wordmarkā).</p>
+</body>
+</html>
